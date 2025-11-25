@@ -1,0 +1,9 @@
+---
+- name: Configure EC2 instance
+  hosts: web
+  become: yes
+  roles:
+    - nginx
+    - docker
+    - docker_compose
+    - change_nginx_port
